@@ -1,0 +1,453 @@
+/* =========================================
+   NORTH STAR BAKERY
+   Touchstone 3: Visual Design & Responsive Layout
+   ========================================= */
+
+/* 1. Color palette and design variables */
+:root {
+  --primary: #6B3F2A;
+  --background: #FFF8ED;
+  --accent: #C87941;
+  --text: #302820;
+  --white: #FFFFFF;
+  --border: #E3D4C3;
+  --light-accent: #F3E4D3;
+}
+
+/* 2. Basic reset */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+audio {
+  display: block;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+a {
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* 3. Header and bakery logo */
+header {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+}
+
+header .logo {
+  width: 110px;
+  margin: 0 auto 0.5rem;
+}
+
+header h1 {
+  margin: 0.5rem 0;
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+}
+
+/* 4. Navigation */
+nav {
+  background-color: var(--primary);
+  padding: 0.5rem 1rem 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4rem 0.25rem;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: #FFE0B8;
+  text-decoration: underline;
+}
+
+/* 5. Main content */
+main {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+.page-intro {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.25;
+}
+
+h2 {
+  color: var(--primary);
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* 6. Images and figures */
+figure {
+  margin: 1.5rem 0;
+  padding: 0;
+}
+
+figure img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+figcaption {
+  padding: 0.75rem;
+  color: var(--primary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+picture {
+  display: block;
+  margin: 1.5rem 0;
+}
+
+picture img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* 7. Flexbox content layouts */
+.content-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.product-card {
+  padding: 1rem;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  margin-top: 0;
+}
+
+.price {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* 8. Featured item and highlighted sections */
+.featured-item {
+  background-color: var(--light-accent);
+  border-left: 5px solid var(--accent);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+}
+
+.info-panel {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 9. Buttons and call-to-action links */
+.button,
+button,
+input[type="submit"] {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0.75rem 1.25rem;
+  border: 2px solid var(--primary);
+  border-radius: 5px;
+  font: inherit;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+/* 10. Contact form */
+form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1.25rem;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+fieldset {
+  min-width: 0;
+  margin: 0 0 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: var(--primary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-width: 0;
+  padding: 0.75rem;
+  border: 1px solid #8B796A;
+  border-radius: 5px;
+  background-color: var(--white);
+  color: var(--text);
+  font: inherit;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.form-help {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+/* 11. Hours and location */
+.business-info {
+  padding: 1.25rem;
+  background-color: var(--light-accent);
+  border-radius: 8px;
+}
+
+.business-info h2 {
+  margin-bottom: 0.75rem;
+}
+
+/* 12. Audio and video */
+.media-section {
+  margin: 2rem 0;
+}
+
+video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* 13. Footer */
+footer {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0.4rem 0;
+}
+
+footer a {
+  color: var(--white);
+}
+
+footer a:hover {
+  color: #FFE0B8;
+}
+
+/* 14. Tablet and desktop responsive layout */
+@media (min-width: 768px) {
+  header {
+    padding: 1.5rem;
+  }
+
+  header .logo {
+    width: 125px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  nav ul {
+    gap: 1rem 2rem;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .content-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .content-layout > * {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .product-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .product-card {
+    flex: 1 1 280px;
+    min-width: 0;
+  }
+
+  .featured-item {
+    padding: 2rem;
+  }
+
+  .business-info {
+    padding: 1.75rem;
+  }
+
+  form {
+    padding: 2rem;
+  }
+}
+
+/* 15. Larger desktop screens */
+@media (min-width: 1024px) {
+  main {
+    padding: 2.5rem;
+  }
+
+  .page-intro {
+    padding: 2.5rem 0;
+  }
+}
+
+/* 16. Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
