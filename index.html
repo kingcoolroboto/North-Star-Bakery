@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,7 @@
   <title>Home | North Star Bakery</title>
 
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -156,6 +158,162 @@
       </a>
     </section>
 
+    <!-- ==========================================
+         Touchstone 4: Bakery Pre-Order Helper
+         ========================================== -->
+    <section id="bakery-preorder" class="preorder-section">
+
+      <h2>Bakery Pre-Order Helper</h2>
+
+      <p>
+        Planning your next bakery order? Choose your favorite breads,
+        pastries, or cakes below and review your selections before
+        sending us your inquiry.
+      </p>
+
+      <!-- Interactive Product Selector -->
+      <div class="preorder-products">
+        <h3>Choose Your Bakery Products</h3>
+
+        <p>
+          Enter a quantity for any product you would like to request.
+          Set the quantity to zero to remove it from your selection.
+        </p>
+
+        <div id="product-list" class="product-list">
+          <!-- Products are rendered by script.js -->
+        </div>
+      </div>
+
+      <!-- Live Order Summary -->
+      <div class="preorder-summary">
+        <h3>Your Pre-Order Summary</h3>
+
+        <div
+          id="order-summary"
+          aria-live="polite"
+          aria-relevant="additions removals text">
+          <p>No products selected yet.</p>
+        </div>
+
+        <p class="order-total">
+          <strong>Total:</strong>
+          <span id="order-total">$0.00 (0 items)</span>
+        </p>
+
+        <button type="button" id="clear-order" class="button">
+          Clear Selections
+        </button>
+
+        <p
+          id="storage-message"
+          role="status"
+          aria-live="polite">
+          Choose your favorite bakery products to start your pre-order.
+        </p>
+      </div>
+
+      <!-- Validated Pre-Order Inquiry Form -->
+      <div class="preorder-form-container">
+        <h3>Tell Us About Your Order</h3>
+
+        <p>
+          Complete the form below so we can understand your request.
+          Please include your preferred pickup date and any special
+          instructions in the order details.
+        </p>
+
+        <form id="preorder-form" novalidate>
+
+          <div class="form-group">
+            <label for="customer-name">Full Name *</label>
+
+            <input
+              type="text"
+              id="customer-name"
+              name="name"
+              autocomplete="name"
+              placeholder="Enter your full name"
+              required
+              aria-describedby="customer-name-error">
+
+            <span
+              id="customer-name-error"
+              class="error"
+              aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="customer-email">Email Address *</label>
+
+            <input
+              type="email"
+              id="customer-email"
+              name="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+              aria-describedby="customer-email-error">
+
+            <span
+              id="customer-email-error"
+              class="error"
+              aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="request-type">Request Type *</label>
+
+            <select
+              id="request-type"
+              name="requestType"
+              required
+              aria-describedby="request-type-error">
+
+              <option value="">Select a request type</option>
+              <option value="bread">Bread</option>
+              <option value="pastry">Pastries</option>
+              <option value="cake">Cakes</option>
+              <option value="mixed">Mixed Order</option>
+              <option value="other">Other Inquiry</option>
+            </select>
+
+            <span
+              id="request-type-error"
+              class="error"
+              aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="order-details">Order Details *</label>
+
+            <textarea
+              id="order-details"
+              name="details"
+              rows="5"
+              placeholder="Describe your order, quantities, preferred pickup date, or special requests."
+              aria-describedby="order-details-error"></textarea>
+
+            <span
+              id="order-details-error"
+              class="error"
+              aria-live="polite"></span>
+          </div>
+
+          <p class="form-note">
+            * Required fields. Your inquiry will be checked before it
+            is saved in this browser.
+          </p>
+
+          <button type="submit" class="button">
+            Validate Pre-Order
+          </button>
+
+        </form>
+      </div>
+
+    </section>
+
     <!-- About Our Bakery -->
     <section class="content-layout">
 
@@ -226,8 +384,8 @@
         and next steps.
       </p>
 
-      <a class="button" href="contact.html">
-        Send a Pre-Order Inquiry
+      <a class="button" href="#bakery-preorder">
+        Start Your Pre-Order
       </a>
     </section>
 
@@ -251,4 +409,3 @@
 
 </body>
 </html>
-
