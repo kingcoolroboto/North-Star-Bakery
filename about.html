@@ -12,6 +12,7 @@
   <title>About Us | North Star Bakery</title>
 
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -57,6 +58,14 @@
         is to create a friendly place where customers feel welcome
         and find something to enjoy.
       </p>
+
+      <a class="button" href="products.html">
+        Explore Our Products
+      </a>
+
+      <a class="button" href="products.html#bakery-preorder">
+        Plan a Pre-Order
+      </a>
     </section>
 
     <!-- Storefront Image -->
@@ -172,45 +181,28 @@
       <h2>A Look Behind the Scenes</h2>
 
       <p>
-        Take a look at our behind-the-scenes bakery video to learn
-        more about the atmosphere and work involved in a bakery.
+        Take a look at this video to explore a bakery-related
+        experience and learn more about the atmosphere of baking.
       </p>
 
-
-<div class="video-container">
-  <iframe
-    src="https://www.youtube.com/embed/4sslvAm-_5A"
-    title="Beanstalk"
-    allowfullscreen>
-  </iframe>
-</div>
-
-<style>
-  .video-container {
-    width: 90%;
-    max-width: 420px;
-    aspect-ratio: 16 / 9;
-    margin: 24px auto;
-    position: relative;
-  }
-
-  .video-container iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    border-radius: 10px;
-  }
-</style>
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/4sslvAm-_5A"
+          title="Behind-the-scenes bakery video"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
 
       <p class="form-help">
-        Video playback depends on browser support and the provided
-        media file.
+        Video playback depends on availability of the embedded
+        YouTube video and your browser settings.
       </p>
     </section>
 
-    <!-- Welcome Audio Alternative -->
+    <!-- Welcome Audio -->
     <section class="media-section">
       <h2>A Welcome from North Star Bakery</h2>
 
@@ -228,9 +220,14 @@
         Please explore our website or contact North Star Bakery
         to learn more about us.
       </audio>
+
+      <p class="form-help">
+        If the audio does not play, confirm that
+        bakery-welcome_c.mp3 exists in your project folder.
+      </p>
     </section>
 
-    <!-- Call to Action -->
+    <!-- Pre-Order Call to Action -->
     <section class="featured-item">
       <h2>Become Part of Our Bakery Community</h2>
 
@@ -239,8 +236,18 @@
         breakfast, family meal, or special event.
       </p>
 
+      <p>
+        You can browse our products, select quantities, review your
+        pre-order summary, and complete the inquiry form on our
+        products page.
+      </p>
+
       <a class="button" href="products.html">
         View Our Products
+      </a>
+
+      <a class="button" href="products.html#bakery-preorder">
+        Start a Pre-Order
       </a>
 
       <a class="button" href="contact.html">
@@ -268,4 +275,3 @@
 
 </body>
 </html>
-
